@@ -70,7 +70,7 @@ class EmbeddingBuilder  {
     fun padSequence ( sequence : Array<DoubleArray> ) : Array<DoubleArray> {
         val maxlen = this.maxlen
         if ( sequence.size > maxlen!!) {
-            return sequence.sliceArray( 0..maxlen )
+            return sequence.sliceArray( 0 until maxlen )
         }
         else if ( sequence.size < maxlen ) {
             val array = ArrayList<DoubleArray>()
